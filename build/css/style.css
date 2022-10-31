@@ -544,7 +544,7 @@ button,
 }
 
 body {
-  font-family: "PT Mono";
+  font-family: "PT-Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -771,7 +771,6 @@ body {
 }
 
 .header {
-  position: fixed;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -832,6 +831,106 @@ body {
   background: rgba(4, 24, 39, 0);
   padding: 10px 15px;
   cursor: pointer;
+}
+
+.footer {
+  margin-top: 30px;
+  padding: 0 40px;
+  background: #041827;
+}
+
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 50px 0 55px 0;
+}
+
+.footer__logo-wrapper {
+  margin-right: 160px;
+}
+
+.footer__logo {
+  display: block;
+}
+
+.footer__sosial-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-top: 35px;
+  padding: 0;
+  width: 215px;
+}
+
+.footer__sosial-item {
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__nav-wrapper {
+  margin-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.footer__nav-item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.7019607843);
+  width: 220px;
+}
+
+.footer__nav-title {
+  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  margin: 5px 0 20px 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+.footer__nav-link {
+  display: block;
+  color: rgba(255, 255, 255, 0.7019607843);
 }
 
 /* @mixin hover-focus {
