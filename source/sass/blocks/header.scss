@@ -65,7 +65,10 @@
 
   @media (max-width: $vp-1024) {
     width: auto;
-    margin-right: 20px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
   }
 }
 

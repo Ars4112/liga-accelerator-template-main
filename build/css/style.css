@@ -982,6 +982,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  font-weight: 700;
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -991,6 +992,41 @@ body {
   border-radius: 3px;
   padding: 15px 25px;
   width: 410px;
+}
+
+.benefits {
+  width: 100%;
+  padding: 120px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.benefits__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (595px)[2];
+  grid-template-columns: repeat(2, 595px);
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.about__wrapper-text {
+  margin-left: 100px;
+  width: 970px;
 }
 
 /* @mixin hover-focus {
@@ -1075,6 +1111,9 @@ body {
 
   .header__link {
     width: auto;
+  }
+
+  .header__link:not(:last-child) {
     margin-right: 20px;
   }
 
@@ -1125,7 +1164,26 @@ body {
   }
 
   .main-page {
+    min-height: 640px;
     margin-top: -15px;
+    padding: 0 50px;
+    padding-top: 180px;
+  }
+
+  .main-page__title {
+    font-family: "Roboto-Condensed", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+  .main-page__text {
+    margin: 20px 0 50px 0;
+  }
+
+  .main-page__button {
+    margin-left: 40px;
   }
 }
 
@@ -1181,6 +1239,40 @@ body {
 
   .footer__nav-list {
     margin-top: 20px;
+  }
+
+  .main-page {
+    min-height: 560px;
+    padding: 0 25px;
+    padding-top: 150px;
+  }
+
+  .main-page__title {
+    font-family: "Roboto-Condensed", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .main-page__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .main-page__button {
+    font-family: "Roboto-Condensed", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 0;
+    max-width: 270px;
+    padding: 10px 30px;
+  }
+
+  .main-page__words {
+    display: none;
   }
 }
 

@@ -9,7 +9,16 @@
   padding-top: 305px;
 
   @media (max-width: $vp-1024) {
+    min-height: 640px;
     margin-top: -15px;
+    padding: 0 50px;
+    padding-top: 180px;
+  }
+
+  @media (max-width: $vp-768) {
+    min-height: 560px;
+    padding: 0 25px;
+    padding-top: 150px;
   }
 }
 
@@ -24,6 +33,14 @@
   text-transform: uppercase;
   color: #f2f5f7;
   margin: 0;
+
+  @media (max-width: $vp-1024) {
+    @include fonts(64px, 75px);
+  }
+
+  @media (max-width: $vp-768) {
+    @include fonts(36px, 42px);
+  }
 }
 
 .main-page__text {
@@ -32,10 +49,20 @@
   color: #f2f5f7;
   max-width: 590px;
   margin: 40px 0;
+
+  @media (max-width: $vp-1024) {
+    margin: 20px 0 50px 0;
+  }
+
+  @media (max-width: $vp-768) {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .main-page__button {
   @include fonts(18px, 21px);
+  font-weight: 700;
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -45,4 +72,21 @@
   border-radius: 3px;
   padding: 15px 25px;
   width: 410px;
+
+  @media (max-width: $vp-1024) {
+    margin-left: 40px;
+  }
+
+  @media (max-width: $vp-768) {
+    @include fonts(14px, 16px);
+    margin-left: 0;
+    max-width: 270px;
+    padding: 10px 30px;
+  }
+}
+
+.main-page__words {
+  @media (max-width: $vp-768) {
+    display: none;
+  }
 }
