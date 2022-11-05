@@ -86,7 +86,7 @@
         <ul class="benefits__list">
           <li class="benefits__item">
             <svg
-              class="footer__social-icon"
+              class="benefits__icon"
               width="35"
               height="35"
               xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +103,7 @@
           </li>
           <li class="benefits__item">
             <svg
-              class="footer__social-icon"
+              class="benefits__icon"
               width="35"
               height="35"
               xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +120,7 @@
           </li>
           <li class="benefits__item">
             <svg
-              class="footer__social-icon"
+              class="benefits__icon"
               width="35"
               height="35"
               xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@
           </li>
           <li class="benefits__item">
             <svg
-              class="footer__social-icon"
+              class="benefits__icon"
               width="35"
               height="35"
               xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +154,7 @@
       <section class="about">
         <picture>
           <img
-            class="product-card__img"
+            class="about__img"
             src="img/2022.png"
             srcset="img/2022@2x.png 2x"
             alt="2022"
@@ -162,28 +162,62 @@
             height="320"
           />
         </picture>
-        <div class="about__wrapper-text">
+        <div class="about__wrapper">
           <h2 class="about__title">О компании</h2>
-          <p class="about__text">
-            Мы поставляем электронные комплектующие, производим печатные платы и
-            предоставляем мировые технологии с 1997 года. Выполняем срочные
-            заказы и пилотные образцы до 10 дней. Наши поставщики - мировые
-            производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
-            REFOND. Печатные платы и комплектующие Service Devices применяются
-            на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ,
-            АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
-            Производители светотехники России.
-          </p>
-          <p class="about__text">
-            Smart Device - это команда профессионалов. Через нас прошло более 1
-            000 000 клиентов, 70% из которых продолжают сотрудничество по сей
-            день. На данный момент насчитывается более 14 офисов по всей стране
-            и 20 городов присутствия. Мы стремимся к постоянному развитию и
-            повышению уровня качества продукции, производимой внутри компании.
-            Использование инновационных технологий помогает экономить деньги и
-            время наших клиентов
-          </p>
-          <button type="button">подробнее</button>
+          <div class="about__wrapper-text">
+            <p class="about__text">
+              Мы поставляем электронные комплектующие, производим печатные платы
+              и предоставляем мировые технологии с 1997 года. Выполняем срочные
+              заказы и пилотные образцы до 10 дней.
+            </p>
+            <p class="about__text">
+              Наши поставщики - мировые производители электронных компонентов:
+              OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие
+              Service Devices применяются на предприятиях Российских Железных
+              Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома,
+              СпецМедТехники. Среди наших клиентов крупнейшие Производители
+              светотехники России.
+            </p>
+            <p class="about__text">
+              Smart Device - это команда профессионалов. Через нас прошло более
+              1 000 000 клиентов, 70% из которых продолжают сотрудничество по
+              сей день. На данный момент насчитывается более 14 офисов по всей
+              стране и 20 городов присутствия. Мы стремимся к постоянному
+              развитию и повышению уровня качества продукции, производимой
+              внутри компании. Использование инновационных технологий помогает
+              экономить деньги и время наших клиентов
+            </p>
+          </div>
+          <button class="about__button" type="button">подробнее</button>
+        </div>
+      </section>
+      <section class="services">
+        <div class="services__wrapper">
+          <h2 class="services__title">
+            Smart Device предлагает следующие товары и услуги
+          </h2>
+          <ul class="services__list">
+            <li class="services__item services__item--production">
+              <a class="sevices__link" href="#">
+                <h3 class="service__item-title">Производство печатных плат</h3>
+                <div class="services__item-element"></div>
+              </a>
+            </li>
+            <li class="services__item services__item--installation">
+              <a class="sevices__link" href="#">
+                <h3 class="service__item-title">Монтаж печатных плат</h3>
+                <div class="services__item-element"></div>
+              </a>
+            </li>
+            <li class="services__item services__item--accessories">
+              <a class="sevices__link" href="#">
+                <h3 class="service__item-title">
+                  Комплектующие для светотехники
+                </h3>
+                <div class="services__item-element"></div>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
     </main>

@@ -100,12 +100,12 @@
 }
 
 .footer__nav-item {
-  margin-right: 10px;
+  // margin-right: 10px;
   color: #ffffffb3;
 
-  &:not(:first-child) {
-    margin-top: 10px;
-  }
+  // &:not(:first-child) {
+  //   margin-top: 10px;
+  // }
 }
 
 .footer__nav-title {
@@ -116,6 +116,7 @@
   color: #ffffff;
   border: none;
   background: transparent;
+  text-align: start;
 
   @media (max-width: $vp-768) {
     margin: 0;
@@ -133,10 +134,17 @@
 }
 
 .footer__nav-list--columns {
-  column-count: 2;
+  // column-count: 2;
+  display: grid;
+  grid-template-rows: repeat(4, max-content);
+  grid-auto-flow: column;
+  // gap: 10px, 30px;
+  gap: 10px 30px;
 
   @media (max-width: $vp-1024) {
-    column-count: 1;
+    // column-count: 1;
+    grid-template-columns: repeat(1, auto);
+    grid-auto-flow: row;
   }
 }
 

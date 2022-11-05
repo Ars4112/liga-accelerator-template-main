@@ -3,6 +3,10 @@
   padding: 120px 40px;
   display: flex;
   justify-content: center;
+
+  @media (max-width: $vp-768) {
+    padding: 50px 25px;
+  }
 }
 
 .benefits__list {
@@ -10,5 +14,37 @@
   padding: 0;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 595px);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 29px 32px;
+  max-width: 1157px;
+
+  @media (max-width: $vp-768) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.benefits__title {
+  @include fonts(24px, 34px);
+  margin: 20px 0 15px 0;
+  color: #00b2ff;
+}
+
+.benefits__item {
+  padding: 40px 45px;
+  border: 1px solid #ebebeb;
+  border-left: 5px solid #00b2ff;
+  color: #00b2ff;
+
+  &:hover {
+    background: #00b2ff;
+    color: #f2f5f7;
+
+    & .benefits__title {
+      color: #f2f5f7;
+    }
+
+    & .benefits__icon {
+      fill: #f2f5f7;
+    }
+  }
 }

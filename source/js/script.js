@@ -26,3 +26,29 @@ if (viewport <= 767) {
     });
   });
 }
+
+const addText = ()=> {
+  const button = document.querySelector('.about__button');
+  let aboutText = document.getElementsByClassName('about__text');
+  const arrayAboutText = Array.from(aboutText);
+  let arrayAboutTextEnd = arrayAboutText.slice(2);
+
+  arrayAboutTextEnd.forEach((ss)=> {
+    ss.classList.toggle('about__text--hidden');
+
+  });
+
+  button.addEventListener('click', ()=> {
+    arrayAboutTextEnd.forEach((ss)=> {
+      ss.classList.toggle('about__text--hidden');
+
+      if (ss.classList.contains('about__text--hidden')) {
+        button.textContent = 'подробнее';
+      } else {
+        button.textContent = 'свернуть';
+      }
+    });
+  });
+};
+
+addText();
