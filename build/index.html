@@ -29,7 +29,7 @@
             </picture>
           </a>
         </li>
-        <li class="header__item">
+        <li class="header__item header__item--grid">
           <a class="header__link" href="#">
             <span class="visually-hidden">адрес электронной почты</span>
             <svg
@@ -229,19 +229,19 @@
           <form action="https://echo.htmlacademy.ru" method="get">
             <div class="form__wrapper-inner">
               <label class="form__label">
-                <input class="form__input" type="text" placeholder="Имя" required/>
+                <input class="form__input" name="Имя" type="text" placeholder="Имя" required/>
               </label>
               <label class="form__label">
-                <input class="form__input" type="text" placeholder="Телефон" required/>
+                <input class="form__input" name="Телефон" type="text" placeholder="Телефон" required/>
               </label>
             </div>
             <div>
-              <textarea class="form__textarea" placeholder="Ваш вопрос"></textarea>
+              <textarea class="form__textarea" name="Вопрос" placeholder="Ваш вопрос"></textarea>
             </div>
             <div class="form__wrapper-button">
               <button class="form__button">Задать вопрос</button>
               <label class="form__checkbox">
-                <input class="visually-hidden" type="checkbox" />
+                <input class="form__checkbox-input visually-hidden" type="checkbox" />
                 <span class="form__control-mark"></span>
                 <span class="form__checkbox-text"
                   >Я согласен на обработку персональных данных</span
@@ -368,14 +368,14 @@
             <form action="https://echo.htmlacademy.ru" method="get">
               <div class="form__wrapper-inner form__wrapper-inner--modal">
                 <label class="form__label">
-                  <input class="form__input form__input--modal" type="text" placeholder="Имя" required/>
+                  <input class="form__input form__input--modal" name="Имя" type="text" placeholder="Имя" required/>
                 </label>
                 <label class="form__label">
-                  <input class="form__input form__input--modal" type="text" placeholder="Телефон" required/>
+                  <input class="form__input form__input--modal" name="Телефон" type="text" placeholder="Телефон" required/>
                 </label>
               </div>
               <div>
-                <textarea class="form__textarea form__textarea--modal" placeholder="Ваш вопрос"></textarea>
+                <textarea class="form__textarea form__textarea--modal" name="Вопрос" placeholder="Ваш вопрос"></textarea>
               </div>
               <div class="form__wrapper-button form__wrapper-button--modal">
                 <button class="form__button form__button--modal">Задать вопрос</button>
