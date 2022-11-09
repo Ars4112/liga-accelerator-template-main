@@ -27,19 +27,18 @@ if (viewport <= 767) {
   });
 }
 
-const addText = ()=> {
+const addText = () => {
   const button = document.querySelector('.about__button');
   let aboutText = document.getElementsByClassName('about__text');
   const arrayAboutText = Array.from(aboutText);
   let arrayAboutTextEnd = arrayAboutText.slice(2);
 
-  arrayAboutTextEnd.forEach((ss)=> {
+  arrayAboutTextEnd.forEach((ss) => {
     ss.classList.toggle('about__text--hidden');
-
   });
 
-  button.addEventListener('click', ()=> {
-    arrayAboutTextEnd.forEach((ss)=> {
+  button.addEventListener('click', () => {
+    arrayAboutTextEnd.forEach((ss) => {
       ss.classList.toggle('about__text--hidden');
 
       if (ss.classList.contains('about__text--hidden')) {
@@ -51,4 +50,25 @@ const addText = ()=> {
   });
 };
 
+const addScroll = () => {
+  const mainPageButton = document.querySelector('.main-page__button');
+  const form = document.querySelector('.form');
+
+  const isScroll = ()=> {
+    form.scrollIntoView({
+      block: 'start',
+      behavior: 'smooth',
+    });
+  };
+  mainPageButton.addEventListener('keydown', (evt)=> {
+    if (evt.key === 'Enter') {
+      isScroll();
+    }
+  });
+
+
+  mainPageButton.addEventListener('click', isScroll);
+};
+
 addText();
+addScroll();

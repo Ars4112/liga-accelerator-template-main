@@ -984,6 +984,8 @@ body {
   border-radius: 3px;
   padding: 15px 25px;
   width: 410px;
+  border: none;
+  cursor: pointer;
 }
 
 .benefits {
@@ -1210,8 +1212,8 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: -o-linear-gradient(125deg, #00b3ff 66%, #041827 66%);
-  background: linear-gradient(325deg, #00b3ff 66%, #041827 66%);
+  background: -o-linear-gradient(125deg, #00b3ff 67%, #006691 66%);
+  background: linear-gradient(325deg, #00b3ff 67%, #006691 66%);
   padding: 170px 50px 250px 50px;
 }
 
@@ -1632,6 +1634,12 @@ body {
     background-image: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-tablet-1.jpg");
   }
 
+  .services__item--installation {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/service-tablet-2.jpg");
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-tablet-2.jpg");
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-tablet-2.jpg");
+  }
+
   .services__item--accessories {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/service-tablet-3.jpg");
     background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-tablet-3.jpg");
@@ -1658,19 +1666,23 @@ body {
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), (min-resolution: 2dppx) and (max-width: 1024px) {
-  .services__item--production {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/service-tablet-1@2x.jpg");
-    background: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-tablet-1@2x.jpg");
-    background: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-tablet-1@2x.jpg");
-  }
-}
-
 @media (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1024px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1024px) and (min-resolution: 2dppx) {
+  .services__item--production {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/service-tablet-1@2x.jpg");
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-tablet-1@2x.jpg");
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-tablet-1@2x.jpg");
+  }
+
+  .services__item--installation {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/service-tablet-2@2x.jpg");
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-tablet-2@2x.jpg");
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-tablet-2@2x.jpg");
+  }
+
   .services__item--accessories {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/service-tablet-3@2x.jpg");
-    background: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-tablet-3@2x.jpg");
-    background: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-tablet-3@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/service-tablet-3@2x.jpg");
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-tablet-3@2x.jpg");
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-tablet-3@2x.jpg");
   }
 }
 
@@ -1839,6 +1851,26 @@ body {
   }
 }
 
+@media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 768px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 768px) and (min-resolution: 2dppx) {
+  .services__item--production {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/service-mobile-1@2x.jpg");
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-mobile-1@2x.jpg");
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-mobile-1@2x.jpg");
+  }
+
+  .services__item--installation {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/service-mobile-2@2x.jpg");
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-mobile-2@2x.jpg");
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-mobile-2@2x.jpg");
+  }
+
+  .services__item--accessories {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/service-mobile-3@2x.jpg");
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-mobile-3@2x.jpg");
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/service-mobile-3@2x.jpg");
+  }
+}
+
 @media (max-width: 767px) {
   .container {
     padding: 0 25px;
@@ -1866,20 +1898,20 @@ body {
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .services__item--production {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/services-desktop-1@2x.jpg");
-    background: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/services-desktop-1@2x.jpg");
-    background: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/services-desktop-1@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/services-desktop-1@2x.jpg");
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/services-desktop-1@2x.jpg");
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/services-desktop-1@2x.jpg");
+  }
+
+  .services__item--installation {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/services-desktop-2@2x.jpg");
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/services-desktop-2@2x.jpg");
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/services-desktop-2@2x.jpg");
   }
 
   .services__item--accessories {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/services-desktop-3@2x.jpg");
-    background: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/services-desktop-3@2x.jpg");
-    background: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/services-desktop-3@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("/img/services-desktop-3@2x.jpg");
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/services-desktop-3@2x.jpg");
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/services-desktop-3@2x.jpg");
   }
 }
