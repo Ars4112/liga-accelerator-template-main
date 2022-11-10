@@ -18,10 +18,16 @@
 .header__list {
   list-style: none;
   display: flex;
-  justify-content: center;
+
   align-items: center;
   padding: 30px 0 35px 0;
-  margin: 0;
+  max-width: 1220px;
+  margin: 0 auto;
+
+  @media (max-width: 1238px) {
+    width: none;
+    justify-content: space-between;
+  }
 
   @media (max-width: $vp-1024) {
     justify-content: space-between;
@@ -30,16 +36,17 @@
 }
 
 .header__item {
-  &:not(:last-child) {
-    margin-right: 150px;
+  @media (max-width: $vp-1024) {
+    margin: 0;
+  }
+}
 
-    @media (max-width: $vp-1220) {
-      margin-right: auto;
-    }
+.header__logo {
+  display: block;
+  margin-right: 158px;
 
-    @media (max-width: $vp-1024) {
-      margin: 0;
-    }
+  @media (max-width: 1238px) {
+    margin: 0;
   }
 }
 
@@ -51,7 +58,9 @@
   @media (max-width: $vp-1024) {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
+    margin-right: 24px;
+    margin-bottom: 10px;
   }
 }
 
@@ -62,10 +71,9 @@
 }
 
 .header__link {
-  color: #f2f5f7;
-  font-size: 16px;
-  line-height: 18px;
   padding: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .header__link-icon {
@@ -77,6 +85,10 @@
 }
 
 .header__link-text {
+  color: #f2f5f7;
+  font-size: 16px;
+  line-height: 18px;
+
   @media (max-width: $vp-1024) {
     display: none;
   }
@@ -88,5 +100,10 @@
   color: #f2f5f7;
   background: #04182700;
   padding: 10px 15px;
+  margin-left: 150px;
   cursor: pointer;
+
+  @media (max-width: 1238px) {
+    margin: 0;
+  }
 }

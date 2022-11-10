@@ -2,8 +2,11 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 50px;
-  padding-bottom: 100px;
+  padding: 0 50px 100px;
+
+  @media (max-width: $vp-1024) {
+    padding-bottom: 76px;
+  }
 
   @media (max-width: $vp-768) {
     padding: 0 25px;
@@ -12,7 +15,11 @@
 }
 
 .about__img {
-  background-size: contain;
+  display: block;
+
+  @media (max-width: $vp-1024) {
+    margin-right: 90px;
+  }
 
   @media (max-width: $vp-768) {
     display: none;
@@ -25,7 +32,7 @@
   width: 100%;
 
   @media (max-width: $vp-1024) {
-    margin-left: 25px;
+    margin: 0;
     width: 100%;
   }
 
@@ -37,12 +44,20 @@
 
 .about__title {
   @include fonts(36px, 51px);
-  margin: 5px 0 15px 0;
+  margin: 5px 0 10px;
+
+  @media (max-width: $vp-1024) {
+    margin: -2px 0 10px;
+  }
 }
 
 .about__text {
   margin: 0;
   margin-bottom: 20px;
+
+  @media (max-width: $vp-1024) {
+    margin-bottom: 14px;
+  }
 }
 
 .about__text--hidden {
@@ -62,4 +77,8 @@
   width: 180px;
   padding: 14px 0;
   cursor: pointer;
+
+  @media (max-width: $vp-1024) {
+    margin-top: 10px;
+  }
 }

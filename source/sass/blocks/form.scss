@@ -2,12 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(325deg, #00b3ff 67%, #006691 66%);
+  background: linear-gradient(319deg, #00b3ff 66%, #006691 66%);
   padding: 170px 50px 250px 50px;
 
   @media (max-width: $vp-1024) {
     background: #00b3ff;
-    padding: 50px 50px 120px 50px;
+    padding: 45px 50px 124px 50px;
   }
 
   @media (max-width: $vp-768) {
@@ -25,7 +25,7 @@
 
 .form__image {
   display: block;
-  margin-right: 120px;
+  margin-right: 104px;
 
   @media (max-width: 1315px) {
     margin-right: auto;
@@ -72,9 +72,14 @@
   border: none;
   color: #ffffff;
   margin-bottom: 35px;
+  height: 155px;
 
   &::placeholder {
     color: #ffffff;
+  }
+
+  @media (max-width: $vp-1024) {
+    margin-bottom: 25px;
   }
 
   @media (max-width: $vp-768) {
@@ -119,6 +124,10 @@
   width: 265px;
   padding: 15px 25px;
   margin-right: 50px;
+
+  @media (max-width: $vp-1024) {
+    margin-right: 86px;
+  }
 
   @media (max-width: $vp-768) {
     width: 100%;
