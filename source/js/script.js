@@ -1,26 +1,41 @@
 const footerListNav = document.querySelectorAll('.footer__nav-list');
 const footerNavTitle = document.querySelectorAll('.footer__nav-title');
+const footerNavElement = document.querySelectorAll('.footer__nav-element');
 let viewport = document.documentElement.clientWidth;
 
 if (viewport <= 767) {
-  footerListNav.forEach(function (userItem) {
+  footerNavElement.forEach((element)=> {
+    element.classList.toggle('footer__nav-element--opened');
+  });
+  footerListNav.forEach((userItem)=> {
     userItem.classList.toggle('footer__nav-list--hidden');
   });
-  footerNavTitle.forEach(function (ss) {
+  footerNavTitle.forEach(function (titleElement) {
     const current =
-      ss.parentElement.getElementsByClassName('footer__nav-list')[0];
+      titleElement.parentElement.querySelectorAll('.footer__nav-list')[0];
 
-    ss.addEventListener('click', function () {
-      ss.parentElement
-          .getElementsByClassName('footer__nav-list')[0]
-          .classList.toggle('footer__nav-list--hidden');
+    const currentElement = titleElement.parentElement.querySelectorAll('.footer__nav-element')[0];
+
+    titleElement.addEventListener('click', function () {
+      current.classList.toggle('footer__nav-list--hidden');
+
       const isClosed = current.classList.contains('footer__nav-list--hidden');
+
+      if (!isClosed) {
+        currentElement.classList.add('footer__nav-element--closed');
+
+      } else {
+        currentElement.classList.remove('footer__nav-element--closed');
+      }
+
       if (isClosed) {
         return;
       }
-      footerListNav.forEach((zz) => {
-        if (zz !== current) {
-          zz.classList.add('footer__nav-list--hidden');
+
+      footerListNav.forEach((listElement) => {
+        if (listElement !== current) {
+          listElement.classList.add('footer__nav-list--hidden');
+          listElement.parentElement.querySelectorAll('.footer__nav-element')[0].classList.remove('footer__nav-element--closed');
         }
       });
     });
@@ -29,19 +44,23 @@ if (viewport <= 767) {
 
 const addText = () => {
   const button = document.querySelector('.about__button');
-  let aboutText = document.getElementsByClassName('about__text');
+  let aboutText = document.querySelectorAll('.about__text-module');
   const arrayAboutText = Array.from(aboutText);
-  let arrayAboutTextEnd = arrayAboutText.slice(2);
+  let arrayAboutTextEnd = arrayAboutText.slice(3);
 
-  arrayAboutTextEnd.forEach((ss) => {
-    ss.classList.toggle('about__text--hidden');
+  if (viewport <= 767) {
+    arrayAboutTextEnd = arrayAboutText.slice(2);
+  }
+
+  arrayAboutTextEnd.forEach((element) => {
+    element.classList.toggle('about__text--hidden');
   });
 
   button.addEventListener('click', () => {
-    arrayAboutTextEnd.forEach((ss) => {
-      ss.classList.toggle('about__text--hidden');
+    arrayAboutTextEnd.forEach((buttonElement) => {
+      buttonElement.classList.toggle('about__text--hidden');
 
-      if (ss.classList.contains('about__text--hidden')) {
+      if (buttonElement.classList.contains('about__text--hidden')) {
         button.textContent = 'подробнее';
       } else {
         button.textContent = 'свернуть';

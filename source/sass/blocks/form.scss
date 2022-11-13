@@ -11,7 +11,7 @@
   }
 
   @media (max-width: $vp-768) {
-    padding: 50px 25px 90px 25px;
+    padding: 50px 25px 81px 25px;
   }
 }
 
@@ -40,6 +40,10 @@
   @include fonts(36px, 51px);
   color: #ffffff;
   margin: 0;
+
+  @media (max-width: $vp-768) {
+    @include fonts(30px, 43px);
+  }
 }
 
 .form__text {
@@ -50,6 +54,13 @@
 
   @media (max-width: $vp-1024) {
     margin: 10px 0 25px 0;
+  }
+
+  @media (max-width: $vp-768) {
+    margin: 3px 0 35px 0;
+    font-size: 14px;
+    line-height: 19px;
+    word-spacing: 16px;
   }
 }
 
@@ -83,7 +94,8 @@
   }
 
   @media (max-width: $vp-768) {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
+    height: 180px;
   }
 }
 
@@ -120,6 +132,7 @@
   background: #041427;
   border-radius: 3px;
   border: none;
+  text-transform: uppercase;
   color: #ffffff;
   width: 265px;
   padding: 15px 25px;
@@ -132,7 +145,8 @@
   @media (max-width: $vp-768) {
     width: 100%;
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    padding: 13px 25px;
   }
 }
 
@@ -155,6 +169,10 @@
   line-height: 16px;
   word-spacing: 10px;
   opacity: 0.8;
+
+  @media (max-width: $vp-768) {
+    font-size: 16px;
+  }
 }
 
 .form__control-mark {
@@ -166,6 +184,10 @@
   height: 15px;
   border: 1px solid #ffffff;
   border-radius: 2px;
+
+  @media (max-width: $vp-768) {
+    left: 4px;
+  }
 }
 
 .form__checkbox-input:checked + .form__control-mark::before {

@@ -9,7 +9,7 @@
   }
 
   @media (max-width: $vp-768) {
-    padding: 50px 25px;
+    padding: 50px 25px 18px;
   }
 }
 
@@ -29,6 +29,7 @@
 
   @media (max-width: $vp-768) {
     grid-template-columns: 1fr;
+    grid-auto-rows: 340px;
   }
 }
 
@@ -40,6 +41,11 @@
   @media (max-width: $vp-1024) {
     margin: 9px 0;
   }
+
+  @media (max-width: $vp-768) {
+    @include fonts(20px, 26px);
+    margin: 14px 0 6px;
+  }
 }
 
 .benefits__text {
@@ -47,6 +53,11 @@
 
   @media (max-width: $vp-1024) {
     margin: 9px 0;
+  }
+
+  @media (max-width: $vp-768) {
+    line-height: 19px;
+    margin: 6px 0;
   }
 }
 
@@ -67,5 +78,9 @@
     & .benefits__icon {
       fill: #f2f5f7;
     }
+  }
+
+  @media (max-width: $vp-768) {
+   padding: 25px;
   }
 }

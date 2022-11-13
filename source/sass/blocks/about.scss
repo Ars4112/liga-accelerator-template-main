@@ -49,6 +49,11 @@
   @media (max-width: $vp-1024) {
     margin: -2px 0 10px;
   }
+
+  @media (max-width: $vp-768) {
+   font-size: 28px;
+   margin-bottom: 3px;
+  }
 }
 
 .about__text {
@@ -58,6 +63,17 @@
   @media (max-width: $vp-1024) {
     margin-bottom: 14px;
   }
+
+  @media (max-width: $vp-768) {
+    margin: 0;
+    line-height: 19px;
+   }
+}
+
+.about__text--margin {
+  @media (max-width: $vp-768) {
+    margin-bottom: 20px;
+   }
 }
 
 .about__text--hidden {
@@ -81,4 +97,10 @@
   @media (max-width: $vp-1024) {
     margin-top: 10px;
   }
+
+  @media (max-width: $vp-768) {
+    width: 160px;
+    padding: 9px 0;
+    margin-top: 14px;
+   }
 }

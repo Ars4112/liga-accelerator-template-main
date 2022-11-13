@@ -15,9 +15,9 @@
   }
 
   @media (max-width: $vp-768) {
-    min-height: 560px;
+    min-height: 494px;
     padding: 0 25px;
-    padding-top: 150px;
+    padding-top: 86px;
   }
 }
 
@@ -58,6 +58,8 @@
   @media (max-width: $vp-768) {
     font-size: 14px;
     line-height: 22px;
+    margin-top: 5px;
+    margin-bottom: 20px;
   }
 }
 
@@ -84,7 +86,7 @@
   @media (max-width: $vp-768) {
     @include fonts(14px, 16px);
     margin-left: 0;
-    // max-width: 270px;
+    margin-top: 24px;
     width: 100%;
     padding: 10px 30px;
   }

@@ -33,6 +33,10 @@
     justify-content: space-between;
     padding: 20px 0 25px 0;
   }
+
+  @media (max-width: $vp-768) {
+    padding-top: 15px;
+  }
 }
 
 .header__item {
@@ -61,6 +65,10 @@
     gap: 30px;
     margin-right: 24px;
     margin-bottom: 10px;
+  }
+
+  @media (max-width: $vp-768) {
+    margin-right: 15px;
   }
 }
 
@@ -101,6 +109,7 @@
   background: #04182700;
   padding: 10px 15px;
   margin-left: 150px;
+  text-transform: uppercase;
   cursor: pointer;
 
   @media (max-width: 1238px) {

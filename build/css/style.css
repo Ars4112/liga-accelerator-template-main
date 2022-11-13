@@ -397,7 +397,7 @@ template {
   font-weight: 400;
   font-family: "PT Mono";
   font-display: swap;
-  src: url("../fonts/PT-Mono.woff2") format("woff2"), url("../fonts/PT-Mono.woff") format("woff");
+  src: url("../fonts/PT-Mono.woff2") format "woff2", url("../fonts/PT-Mono.woff") format "woff";
 }
 
 *,
@@ -833,6 +833,7 @@ body {
   background: rgba(4, 24, 39, 0);
   padding: 10px 15px;
   margin-left: 150px;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -860,20 +861,34 @@ body {
 
 .footer__sosial-list {
   list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (40px)[3];
+  grid-template-columns: repeat(3, 40px);
+  gap: 10px 15px;
+  margin: 0;
+  margin-top: 31px;
+  margin-left: 8px;
+  padding: 0;
+}
+
+.footer__sosial-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 0;
-  margin-top: 22px;
-  padding: 0;
-  width: 170px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5px;
 }
 
-.footer__sosial-item {
-  padding-top: 10px;
-  padding-left: 15px;
+.footer__social-icon {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .footer__nav {
@@ -883,6 +898,7 @@ body {
 }
 
 .footer__nav-wrapper {
+  position: relative;
   margin-left: 34px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -942,6 +958,28 @@ body {
 
 .footer__nav-list--hidden {
   display: none;
+}
+
+.footer__nav-element {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+}
+
+.footer__nav-element--opened {
+  background: url("/img/svg/footer-opened.svg");
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: center;
+}
+
+.footer__nav-element--closed {
+  background: url("/img/svg/footer-closed.svg");
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: center;
 }
 
 .main-page {
@@ -1145,6 +1183,10 @@ body {
   margin: 0;
   margin-bottom: 50px;
   color: #ffffff;
+}
+
+.services__title-mobile {
+  display: none;
 }
 
 .services__list {
@@ -1351,6 +1393,7 @@ body {
   background: #041427;
   border-radius: 3px;
   border: none;
+  text-transform: uppercase;
   color: #ffffff;
   width: 265px;
   padding: 15px 25px;
@@ -1607,13 +1650,11 @@ body {
 
   .footer__sosial-list {
     margin-top: 0;
+    margin-right: -5px;
   }
 
   .footer__nav {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    gap: 150px;
+    gap: 137px;
   }
 
   .footer__nav-wrapper {
@@ -1785,6 +1826,14 @@ body {
     padding: 0 25px;
   }
 
+  .header__list {
+    padding-top: 15px;
+  }
+
+  .header__item--grid {
+    margin-right: 15px;
+  }
+
   .footer {
     padding: 0;
   }
@@ -1802,7 +1851,8 @@ body {
   }
 
   .footer__sosial-list {
-    margin-top: 10px;
+    margin-top: 16px;
+    margin-right: 0;
   }
 
   .footer__nav {
@@ -1811,6 +1861,7 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     border-top: 1px solid rgba(248, 253, 255, 0.7019607843);
+    gap: 0;
   }
 
   .footer__nav-wrapper {
@@ -1829,9 +1880,9 @@ body {
   }
 
   .main-page {
-    min-height: 560px;
+    min-height: 494px;
     padding: 0 25px;
-    padding-top: 150px;
+    padding-top: 86px;
   }
 
   .main-page__title {
@@ -1845,6 +1896,8 @@ body {
   .main-page__text {
     font-size: 14px;
     line-height: 22px;
+    margin-top: 5px;
+    margin-bottom: 20px;
   }
 
   .main-page__button {
@@ -1854,6 +1907,7 @@ body {
     font-size: 14px;
     line-height: 16px;
     margin-left: 0;
+    margin-top: 24px;
     width: 100%;
     padding: 10px 30px;
   }
@@ -1863,12 +1917,31 @@ body {
   }
 
   .benefits {
-    padding: 50px 25px;
+    padding: 50px 25px 18px;
   }
 
   .benefits__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    grid-auto-rows: 340px;
+  }
+
+  .benefits__title {
+    font-family: "Roboto-Condensed", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 14px 0 6px;
+  }
+
+  .benefits__text {
+    line-height: 19px;
+    margin: 6px 0;
+  }
+
+  .benefits__item {
+    padding: 25px;
   }
 
   .about {
@@ -1885,8 +1958,58 @@ body {
     margin: 0;
   }
 
+  .about__title {
+    font-size: 28px;
+    margin-bottom: 3px;
+  }
+
+  .about__text {
+    margin: 0;
+    line-height: 19px;
+  }
+
+  .about__text--margin {
+    margin-bottom: 20px;
+  }
+
+  .about__button {
+    width: 160px;
+    padding: 9px 0;
+    margin-top: 14px;
+  }
+
   .services {
-    padding: 50px 25px 86px 25px;
+    padding: 45px 25px 86px 25px;
+  }
+
+  .services__title {
+    font-size: 29px;
+    line-height: 40px;
+    margin-bottom: 29px;
+  }
+
+  .services__title-desktop {
+    display: none;
+  }
+
+  .services__title-mobile {
+    display: block;
+  }
+
+  .services__item {
+    padding: 26px 30px;
+  }
+
+  .services__item-element {
+    width: 40px;
+    height: 40px;
+  }
+
+  .services__item-element::before {
+    top: 8px;
+    left: 19px;
+    width: 3px;
+    height: 5px;
   }
 
   .services__item--production {
@@ -1907,8 +2030,28 @@ body {
     background-image: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("/img/services-mobile-3.jpg");
   }
 
+  .service__item-title {
+    font-size: 19px;
+    width: 142px;
+  }
+
   .form {
-    padding: 50px 25px 90px 25px;
+    padding: 50px 25px 81px 25px;
+  }
+
+  .form__title {
+    font-family: "Roboto-Condensed", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+  }
+
+  .form__text {
+    margin: 3px 0 35px 0;
+    font-size: 14px;
+    line-height: 19px;
+    word-spacing: 16px;
   }
 
   .form__wrapper-inner {
@@ -1917,7 +2060,8 @@ body {
   }
 
   .form__textarea {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
+    height: 180px;
   }
 
   .form__wrapper-button {
@@ -1930,12 +2074,21 @@ body {
   .form__button {
     width: 100%;
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    padding: 13px 25px;
   }
 
   .form__checkbox {
     width: 100%;
     margin-top: 20px;
+  }
+
+  .form__checkbox-text {
+    font-size: 16px;
+  }
+
+  .form__control-mark {
+    left: 4px;
   }
 }
 
