@@ -159,7 +159,7 @@
         <picture>
           <source
             type="image/webp"
-            srcset="img/2022.webp 1x, img/2022@2x.webp 2x"
+            srcset="img/content/2022.webp 1x, img/content/2022@2x.webp 2x"
           />
           <img
             class="about__img"
@@ -251,6 +251,7 @@
           <form action="https://echo.htmlacademy.ru" method="get">
             <div class="form__wrapper-inner">
               <label class="form__label">
+                <span class="visually-hidden">имя</span>
                 <input
                   class="form__input"
                   name="Имя"
@@ -260,6 +261,7 @@
                 />
               </label>
               <label class="form__label">
+                <span class="visually-hidden">номер телефона</span>
                 <input
                   class="form__input form__input--tel"
                   name="Телефон"
@@ -270,11 +272,14 @@
               </label>
             </div>
             <div>
-              <textarea
-                class="form__textarea"
-                name="Вопрос"
-                placeholder="Ваш вопрос"
-              ></textarea>
+              <label>
+                <span class="visually-hidden">ваш вопрос</span>
+                <textarea
+                  class="form__textarea"
+                  name="Вопрос"
+                  placeholder="Ваш вопрос"
+                ></textarea>
+              </label>
             </div>
             <div class="form__wrapper-button">
               <button class="form__button" type="submit">Задать вопрос</button>
@@ -438,18 +443,25 @@
                 </label>
               </div>
               <div>
-                <textarea
-                  class="form__textarea form__textarea--modal"
-                  name="Вопрос"
-                  placeholder="Ваш вопрос"
-                ></textarea>
+                <label>
+                  <textarea
+                    class="form__textarea form__textarea--modal"
+                    name="Вопрос"
+                    placeholder="Ваш вопрос"
+                  ></textarea>
+                </label>
               </div>
               <div class="form__wrapper-button form__wrapper-button--modal">
                 <button class="form__button form__button--modal" type="submit">
                   Задать вопрос
                 </button>
                 <label class="form__checkbox form__checkbox--modal">
-                  <input class="visually-hidden" type="checkbox" checked  required/>
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    checked
+                    required
+                  />
                   <span class="form__control-mark"></span>
                   <span class="form__checkbox-text form__checkbox-text--modal"
                     >Я согласен на обработку персональных данных</span
