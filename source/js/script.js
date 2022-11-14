@@ -73,7 +73,8 @@ const addScroll = () => {
   const mainPageButton = document.querySelector('.main-page__button');
   const form = document.querySelector('.form');
 
-  const isScroll = () => {
+  const isScroll = (evt) => {
+    evt.preventDefault();
     form.scrollIntoView({
       block: 'start',
       behavior: 'smooth',
@@ -109,11 +110,13 @@ const addMask = () => {
         val = def;
       }
       e.target.value = matrix.replace(/./g, function (a) {
-        return /[_\d]/.test(a) && i < val.length
-          ? val.charAt(i++)
-          : i >= val.length
-            ? ''
-            : a;
+        if (/[_\d]/.test(a) && i < val.length) {
+          return (val.charAt(i++));
+        } else if (i >= val.length) {
+          return ('');
+        } else {
+          return (a);
+        }
       });
     };
     let phoneInputs = document.querySelectorAll('.form__input--tel');

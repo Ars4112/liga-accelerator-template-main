@@ -22,7 +22,7 @@
               />
               <img
                 src="img/svg/logo-mobile.svg"
-                alt="мозги"
+                alt="Логотип Смарт Девайс"
                 width="35"
                 height="35"
               />
@@ -75,10 +75,14 @@
           <p class="main-page__text">
             производство и монтаж, поставка комплектующих, блоков и модулей
           </p>
-          <button class="main-page__button" href="#">
-            <span class="main-page__words">Получить</span> бесплатную
-            консультацию
-          </button>
+          <a class="main-page__button" href="#form">
+            <span class="main-page__button-text-deskstop">
+              Получить бесплатную консультацию</span
+            >
+            <span class="main-page__button-text-mobile"
+              >бесплатная консультация</span
+            >
+          </a>
         </div>
       </section>
       <section class="benefits">
@@ -153,6 +157,10 @@
       </section>
       <section class="about">
         <picture>
+          <source
+            type="image/webp"
+            srcset="img/2022.webp 1x, img/2022@2x.webp 2x"
+          />
           <img
             class="about__img"
             src="img/2022.png"
@@ -164,26 +172,32 @@
         </picture>
         <div class="about__wrapper">
           <h2 class="about__title">О компании</h2>
-          <p class="about__text about__text--margin"> <span class="about__text-module">
-            Мы поставляем электронные комплектующие, производим печатные платы и
-            предоставляем мировые технологии с 1997 года. Выполняем срочные
-            заказы и пилотные образцы до 10 дней.
-          </span>
-          </p>
-          <p class="about__text"><span class="about__text-module">
-            Наши поставщики - мировые производители электронных компонентов:
-            OSRAM, CREE, HOLGLITRONIC, REFOND.</span><span class="about__text-module"> Печатные платы и комплектующие
-            Service Devices применяются на предприятиях Российских Железных
-            Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники.
-            Среди наших клиентов крупнейшие Производители светотехники России.</span>
+          <p class="about__text about__text--margin">
             <span class="about__text-module">
-            Smart Device - это команда профессионалов. Через нас прошло более 1
-            000 000 клиентов, 70% из которых продолжают сотрудничество по сей
-            день. На данный момент насчитывается более 14 офисов по всей стране
-            и 20 городов присутствия. Мы стремимся к постоянному развитию и
-            повышению уровня качества продукции, производимой внутри компании.
-            Использование инновационных технологий помогает экономить деньги и
-            время наших клиентов.</span>
+              Мы поставляем электронные комплектующие, производим печатные платы
+              и предоставляем мировые технологии с 1997 года. Выполняем срочные
+              заказы и пилотные образцы до 10 дней.
+            </span>
+          </p>
+          <p class="about__text">
+            <span class="about__text-module">
+              Наши поставщики - мировые производители электронных компонентов:
+              OSRAM, CREE, HOLGLITRONIC, REFOND.</span
+            ><span class="about__text-module">
+              Печатные платы и комплектующие Service Devices применяются на
+              предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ,
+              АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов
+              крупнейшие Производители светотехники России.</span
+            >
+            <span class="about__text-module">
+              Smart Device - это команда профессионалов. Через нас прошло более
+              1 000 000 клиентов, 70% из которых продолжают сотрудничество по
+              сей день. На данный момент насчитывается более 14 офисов по всей
+              стране и 20 городов присутствия. Мы стремимся к постоянному
+              развитию и повышению уровня качества продукции, производимой
+              внутри компании. Использование инновационных технологий помогает
+              экономить деньги и время наших клиентов.</span
+            >
           </p>
           <button class="about__button" type="button">подробнее</button>
         </div>
@@ -191,26 +205,29 @@
       <section class="services">
         <div class="services__wrapper">
           <h2 class="services__title">
-          <span class="services__title-desktop">Smart Device предлагает следующие товары и услуги</span>
-            <span class="services__title-mobile">Товары и услуги Smart Device</span>
-
+            <span class="services__title-desktop"
+              >Smart Device предлагает следующие товары и услуги</span
+            >
+            <span class="services__title-mobile"
+              >Товары и услуги Smart Device</span
+            >
           </h2>
           <ul class="services__list">
             <li class="services__item services__item--production">
-              <a class="sevices__link" href="#">
-                <h3 class="service__item-title">Производство печатных плат</h3>
+              <a class="services__link" href="#">
+                <h3 class="services__item-title">Производство печатных плат</h3>
                 <div class="services__item-element"></div>
               </a>
             </li>
             <li class="services__item services__item--installation">
-              <a class="sevices__link" href="#">
-                <h3 class="service__item-title">Монтаж печатных плат</h3>
+              <a class="services__link" href="#">
+                <h3 class="services__item-title">Монтаж печатных плат</h3>
                 <div class="services__item-element"></div>
               </a>
             </li>
             <li class="services__item services__item--accessories">
-              <a class="sevices__link" href="#">
-                <h3 class="service__item-title">
+              <a class="services__link" href="#">
+                <h3 class="services__item-title">
                   Комплектующие для светотехники
                 </h3>
                 <div class="services__item-element"></div>
@@ -219,7 +236,7 @@
           </ul>
         </div>
       </section>
-      <section class="form">
+      <section class="form" id="form">
         <h2 class="visually-hidden">обратная связь</h2>
         <img
           class="form__image"
@@ -260,12 +277,14 @@
               ></textarea>
             </div>
             <div class="form__wrapper-button">
-              <button class="form__button">Задать вопрос</button>
+              <button class="form__button" type="submit">Задать вопрос</button>
               <label class="form__checkbox">
                 <input
                   class="form__checkbox-input visually-hidden"
                   type="checkbox"
                   name="agreement"
+                  checked
+                  required
                 />
                 <span class="form__control-mark"></span>
                 <span class="form__checkbox-text"
@@ -280,11 +299,13 @@
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__logo-wrapper">
-          <img
-            class="footer__logo"
-            src="img/svg/logo-desktop.svg"
-            alt="Логотип Смарт Девайс"
-          />
+          <a href="#">
+            <img
+              class="footer__logo"
+              src="img/svg/logo-desktop.svg"
+              alt="Логотип Смарт Девайс"
+            />
+          </a>
           <ul class="footer__sosial-list">
             <li class="footer__sosial-item">
               <a class="footer__sosial-link" href="#">
@@ -424,11 +445,11 @@
                 ></textarea>
               </div>
               <div class="form__wrapper-button form__wrapper-button--modal">
-                <button class="form__button form__button--modal">
+                <button class="form__button form__button--modal" type="submit">
                   Задать вопрос
                 </button>
                 <label class="form__checkbox form__checkbox--modal">
-                  <input class="visually-hidden" type="checkbox" />
+                  <input class="visually-hidden" type="checkbox" checked  required/>
                   <span class="form__control-mark"></span>
                   <span class="form__checkbox-text form__checkbox-text--modal"
                     >Я согласен на обработку персональных данных</span

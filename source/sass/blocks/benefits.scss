@@ -75,12 +75,16 @@
       color: #f2f5f7;
     }
 
+    & .benefits__text {
+      color: #f2f5f7;
+    }
+
     & .benefits__icon {
       fill: #f2f5f7;
     }
   }
 
   @media (max-width: $vp-768) {
-   padding: 25px;
+    padding: 25px;
   }
 }
