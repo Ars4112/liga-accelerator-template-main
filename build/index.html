@@ -250,37 +250,33 @@
           <p class="form__text">Мы проконсультируем Вас бесплатно</p>
           <form action="https://echo.htmlacademy.ru" method="get">
             <div class="form__wrapper-inner">
-              <label class="form__label">
-                <input
-                  class="form__input"
-                  name="Имя"
-                  type="text"
-                  placeholder="Имя"
-                  required
-                />
+              <label>
+                <span class="visually-hidden">имя</span>
+                <input name="name" type="text" placeholder="Имя" required />
               </label>
-              <label class="form__label">
+              <label>
+                <span class="visually-hidden">номер телефона</span>
+                <span class="form__message form__message-hidden"
+                  >Не корректный номер</span
+                >
                 <input
-                  class="form__input form__input--tel"
-                  name="Телефон"
+                  name="tel"
                   type="text"
                   placeholder="Телефон"
+                  minlength="11"
                   required
                 />
               </label>
             </div>
-            <div>
-              <textarea
-                class="form__textarea"
-                name="Вопрос"
-                placeholder="Ваш вопрос"
-              ></textarea>
-            </div>
+            <label>
+              <span class="visually-hidden">ваш вопрос</span>
+              <textarea name="question" placeholder="Ваш вопрос"></textarea>
+            </label>
             <div class="form__wrapper-button">
-              <button class="form__button" type="submit">Задать вопрос</button>
-              <label class="form__checkbox">
+              <button type="submit">Задать вопрос</button>
+              <label>
                 <input
-                  class="form__checkbox-input visually-hidden"
+                  class="visually-hidden"
                   type="checkbox"
                   name="agreement"
                   checked
@@ -418,18 +414,11 @@
             </p>
             <form action="https://echo.htmlacademy.ru" method="get">
               <div class="form__wrapper-inner form__wrapper-inner--modal">
-                <label class="form__label">
-                  <input
-                    class="form__input form__input--modal form__input--name"
-                    name="Имя"
-                    type="text"
-                    placeholder="Имя"
-                    required
-                  />
+                <label>
+                  <input name="Имя" type="text" placeholder="Имя" required />
                 </label>
-                <label class="form__label">
+                <label>
                   <input
-                    class="form__input form__input--modal form__input--tel"
                     name="Телефон"
                     type="text"
                     placeholder="Телефон"
@@ -438,18 +427,17 @@
                 </label>
               </div>
               <div>
-                <textarea
-                  class="form__textarea form__textarea--modal"
-                  name="Вопрос"
-                  placeholder="Ваш вопрос"
-                ></textarea>
+                <textarea name="Вопрос" placeholder="Ваш вопрос"></textarea>
               </div>
               <div class="form__wrapper-button form__wrapper-button--modal">
-                <button class="form__button form__button--modal" type="submit">
-                  Задать вопрос
-                </button>
-                <label class="form__checkbox form__checkbox--modal">
-                  <input class="visually-hidden" type="checkbox" checked  required/>
+                <button type="submit">Задать вопрос</button>
+                <label>
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    checked
+                    required
+                  />
                   <span class="form__control-mark"></span>
                   <span class="form__checkbox-text form__checkbox-text--modal"
                     >Я согласен на обработку персональных данных</span

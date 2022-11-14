@@ -56,17 +56,19 @@ const addText = () => {
     element.classList.toggle('about__text--hidden');
   });
 
-  button.addEventListener('click', () => {
-    arrayAboutTextEnd.forEach((buttonElement) => {
-      buttonElement.classList.toggle('about__text--hidden');
+  if (button) {
+    button.addEventListener('click', () => {
+      arrayAboutTextEnd.forEach((buttonElement) => {
+        buttonElement.classList.toggle('about__text--hidden');
 
-      if (buttonElement.classList.contains('about__text--hidden')) {
-        button.textContent = 'подробнее';
-      } else {
-        button.textContent = 'свернуть';
-      }
+        if (buttonElement.classList.contains('about__text--hidden')) {
+          button.textContent = 'подробнее';
+        } else {
+          button.textContent = 'свернуть';
+        }
+      });
     });
-  });
+  }
 };
 
 const addScroll = () => {
@@ -80,13 +82,18 @@ const addScroll = () => {
       behavior: 'smooth',
     });
   };
-  mainPageButton.addEventListener('keydown', (evt) => {
-    if (evt.key === 'Enter') {
-      isScroll();
-    }
-  });
 
-  mainPageButton.addEventListener('click', isScroll);
+  if (mainPageButton) {
+    mainPageButton.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Enter') {
+        isScroll();
+      }
+    });
+
+    mainPageButton.addEventListener('click', isScroll);
+  }
+
+
 };
 
 const addMask = () => {
@@ -102,7 +109,7 @@ const addMask = () => {
       let val = e.target.value.replace(/\D/g, '');
       if (clearVal !== 'false' && e.type === 'blur') {
         if (val.length < matrix.match(/([\_\d])/g).length) {
-          e.target.value = '';
+          // e.target.value = '';
           return;
         }
       }
@@ -119,7 +126,7 @@ const addMask = () => {
         }
       });
     };
-    let phoneInputs = document.querySelectorAll('.form__input--tel');
+    let phoneInputs = document.querySelectorAll('input[name="tel"]');
     for (let elem of phoneInputs) {
       for (let ev of ['input', 'blur', 'focus']) {
         elem.addEventListener(ev, eventCalllback);
@@ -127,6 +134,16 @@ const addMask = () => {
     }
   });
 };
+
+document.querySelectorAll('.form form').forEach((item)=> {
+  item.addEventListener('submit', (evt)=> {
+    let phoneInput = item.querySelector('input[name="tel"]');
+    if (phoneInput.value.replaceAll(/\D/g, '').length < 11) {
+      evt.preventDefault();
+      phoneInput.parentElement.querySelectorAll('span')[1].classList.remove('form__message-hidden');
+    }
+  });
+});
 
 addText();
 addScroll();

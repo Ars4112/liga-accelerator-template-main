@@ -1325,7 +1325,7 @@ body {
   gap: 20px 30px;
 }
 
-.form__textarea {
+form textarea {
   width: 100%;
   padding: 25px 15px;
   background: rgba(4, 20, 39, 0.1490196078);
@@ -1336,27 +1336,27 @@ body {
   height: 155px;
 }
 
-.form__textarea::-webkit-input-placeholder {
+form textarea::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.form__textarea::-moz-placeholder {
+form textarea::-moz-placeholder {
   color: #ffffff;
 }
 
-.form__textarea:-ms-input-placeholder {
+form textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.form__textarea::-ms-input-placeholder {
+form textarea::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.form__textarea::placeholder {
+form textarea::placeholder {
   color: #ffffff;
 }
 
-.form__input {
+form input {
   width: 100%;
   background: rgba(4, 20, 39, 0.1490196078);
   border-radius: 3px;
@@ -1365,24 +1365,28 @@ body {
   color: #ffffff;
 }
 
-.form__input::-webkit-input-placeholder {
+form input::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.form__input::-moz-placeholder {
+form input::-moz-placeholder {
   color: #ffffff;
 }
 
-.form__input:-ms-input-placeholder {
+form input:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.form__input::-ms-input-placeholder {
+form input::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.form__input::placeholder {
+form input::placeholder {
   color: #ffffff;
+}
+
+.form__wrapper-inner label {
+  position: relative;
 }
 
 .form__wrapper-button {
@@ -1394,7 +1398,7 @@ body {
   align-items: flex-end;
 }
 
-.form__button {
+form button {
   font-family: "Roboto-Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1412,7 +1416,7 @@ body {
   margin-right: 50px;
 }
 
-.form__checkbox {
+.form__wrapper-button label {
   position: relative;
   width: 260px;
   padding-left: 26px;
@@ -1440,7 +1444,7 @@ body {
   border-radius: 2px;
 }
 
-.form__checkbox-input:checked + .form__control-mark::before {
+.form__wrapper-button label input:checked + .form__control-mark::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1475,7 +1479,7 @@ body {
   grid-row-gap: 20px;
 }
 
-.form__textarea--modal {
+.form__wrapper-inner--modal textarea {
   height: 155px;
   margin-bottom: 25px;
 }
@@ -1487,12 +1491,12 @@ body {
   flex-direction: column;
 }
 
-.form__button--modal {
+.form__wrapper-button--modal button {
   width: 100%;
   margin: 0;
 }
 
-.form__checkbox--modal {
+.form__wrapper-button--modal label {
   width: 395px;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
@@ -1508,6 +1512,21 @@ body {
   height: 40px;
   border: none;
   background: transparent;
+}
+
+.form__message {
+  position: absolute;
+  top: 51px;
+  left: 0;
+  width: 200px;
+  height: 30px;
+  background: #ffffff;
+  color: #000000;
+  text-align: center;
+}
+
+.form__message-hidden {
+  display: none;
 }
 
 /* @mixin hover-focus {
@@ -1792,17 +1811,17 @@ body {
     margin: 10px 0 25px 0;
   }
 
-  .form__textarea {
+  form textarea {
     margin-bottom: 25px;
   }
 
-  .form__input {
+  form input {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
   }
 
-  .form__button {
+  form button {
     margin-right: 86px;
   }
 }
@@ -2075,7 +2094,7 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .form__textarea {
+  form textarea {
     margin-bottom: 26px;
     height: 180px;
   }
@@ -2087,14 +2106,14 @@ body {
     flex-direction: column;
   }
 
-  .form__button {
+  form button {
     width: 100%;
     margin: 0;
     margin-bottom: 0;
     padding: 13px 25px;
   }
 
-  .form__checkbox {
+  .form__wrapper-button label {
     width: 100%;
     margin-top: 20px;
   }

@@ -75,7 +75,7 @@
   }
 }
 
-.form__textarea {
+form textarea {
   width: 100%;
   padding: 25px 15px;
   background: #04142726;
@@ -99,7 +99,7 @@
   }
 }
 
-.form__input {
+form input {
   width: 100%;
   background: #04142726;
   border-radius: 3px;
@@ -116,6 +116,10 @@
   }
 }
 
+.form__wrapper-inner label {
+  position: relative;
+}
+
 .form__wrapper-button {
   display: flex;
   align-items: flex-end;
@@ -125,7 +129,7 @@
   }
 }
 
-.form__button {
+form button {
   @include fonts(16px, 19px);
   font-weight: 700;
   text-align: center;
@@ -150,11 +154,10 @@
   }
 }
 
-.form__checkbox {
+.form__wrapper-button label {
   position: relative;
   width: 260px;
   padding-left: 26px;
-
   cursor: pointer;
 
   @media (max-width: $vp-768) {
@@ -190,7 +193,7 @@
   }
 }
 
-.form__checkbox-input:checked + .form__control-mark::before {
+.form__wrapper-button label input:checked + .form__control-mark::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -221,7 +224,7 @@
   grid-row-gap: 20px;
 }
 
-.form__textarea--modal {
+.form__wrapper-inner--modal textarea {
   height: 155px;
   margin-bottom: 25px;
 }
@@ -230,12 +233,12 @@
   flex-direction: column;
 }
 
-.form__button--modal {
+.form__wrapper-button--modal button {
   width: 100%;
   margin: 0;
 }
 
-.form__checkbox--modal {
+.form__wrapper-button--modal label {
   width: 395px;
   align-self: center;
   margin-top: 20px;
@@ -249,4 +252,19 @@
   height: 40px;
   border: none;
   background: transparent;
+}
+
+.form__message {
+  position: absolute;
+  top: 51px;
+  left: 0;
+  width: 200px;
+  height: 30px;
+  background: #ffffff;
+  color: #000000;
+  text-align: center;
+}
+
+.form__message-hidden {
+  display: none;
 }
