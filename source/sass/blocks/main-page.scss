@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 880px;
   background-image: linear-gradient(180deg, #19202470, #19202400),
-    url("/img/main-page.jpg");
+    url("../img/main-page.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -10,7 +10,7 @@
 
   @media (min-resolution: 2dppx) {
     background-image: linear-gradient(180deg, #19202470, #19202400),
-      url("/img/main-page@2x.jpg");
+      url("../img/main-page@2x.jpg");
   }
 
   @media (max-width: $vp-1024) {
