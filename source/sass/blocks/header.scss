@@ -17,29 +17,34 @@
 
 .header__list {
   list-style: none;
-  display: flex;
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
+  justify-content: space-between;
   padding: 30px 0 35px 0;
   max-width: 1220px;
   margin: 0 auto;
 
   @media (max-width: 1238px) {
-    width: none;
-    justify-content: space-between;
+    grid-template-columns: repeat(3, auto);
   }
 
   @media (max-width: $vp-1024) {
-    justify-content: space-between;
+    grid-template-columns: repeat(2, minmax(auto, 300px));
     padding: 20px 0 25px 0;
   }
 
   @media (max-width: $vp-768) {
+    grid-template-columns: repeat(2, minmax(auto, 170px));
     padding-top: 15px;
   }
 }
 
 .header__item {
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: 10px;
+
   @media (max-width: $vp-1024) {
     margin: 0;
   }
@@ -47,10 +52,13 @@
 
 .header__logo {
   display: block;
-  margin-right: 158px;
 
-  @media (max-width: 1238px) {
-    margin: 0;
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 
@@ -59,16 +67,23 @@
   grid-template-columns: repeat(2, 225px);
   gap: 20px 30px;
 
+  @media (max-width: 1238px) {
+    grid-template-columns: repeat(2, auto);
+  }
+
   @media (max-width: $vp-1024) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: end;
     gap: 30px;
     margin-right: 24px;
     margin-bottom: 10px;
   }
 
   @media (max-width: $vp-768) {
+    justify-content: end;
     margin-right: 15px;
+    max-width: 160px;
   }
 }
 
@@ -82,6 +97,14 @@
   padding: 5px;
   display: flex;
   align-items: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .header__link-icon {
@@ -103,16 +126,27 @@
 }
 
 .header__button {
+  @include fonts(14px, 16px);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.05em;
   border: 1px solid #f2f5f7;
   border-radius: 3px;
   color: #f2f5f7;
-  background: #04182700;
+  background: transparent;
+  justify-self: end;
+  margin-right: 67px;
   padding: 10px 15px;
-  margin-left: 150px;
   text-transform: uppercase;
+  width: 160px;
+  align-self: center;
   cursor: pointer;
 
-  @media (max-width: 1238px) {
-    margin: 0;
+  &:hover {
+    background: #091a3d;
+  }
+
+  &:active {
+    border: none;
   }
 }

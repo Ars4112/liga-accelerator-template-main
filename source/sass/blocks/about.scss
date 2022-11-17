@@ -95,6 +95,15 @@
   padding: 14px 0;
   cursor: pointer;
 
+  &:hover {
+    background: #041427;
+    color: #ffffff;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
   @media (max-width: $vp-1024) {
     margin-top: 10px;
   }

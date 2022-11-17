@@ -1,6 +1,7 @@
 .main-page {
   width: 100%;
   min-height: 880px;
+  background-color: #1f5a72;
   background-image: linear-gradient(180deg, #19202470, #19202400),
     url("../img/main-page.jpg");
   background-repeat: no-repeat;
@@ -8,9 +9,19 @@
   background-size: cover;
   padding-top: 305px;
 
+  @media (min-resolution: 1dppx) {
+    background-image: linear-gradient(180deg, #19202470, #19202400),
+      url("../img/main-page.webp");
+  }
+
   @media (min-resolution: 2dppx) {
     background-image: linear-gradient(180deg, #19202470, #19202400),
       url("../img/main-page@2x.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(180deg, #19202470, #19202400),
+      url("../img/main-page@2x.webp");
   }
 
   @media (max-width: $vp-1024) {
@@ -83,6 +94,14 @@
   width: 410px;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background: #28bcfc;
+  }
+
+  &:active {
+    background: #39afe2;
+  }
 
   @media (max-width: $vp-1024) {
     margin-left: 44px;
