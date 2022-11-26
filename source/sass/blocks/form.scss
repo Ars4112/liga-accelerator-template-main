@@ -31,9 +31,9 @@
     margin-right: auto;
   }
 
-  @media (max-width: 1230px) {
-    display: none;
-  }
+  // @media (max-width: 1230px) {
+  //   display: none;
+  // }
 }
 
 .form__title {
@@ -235,7 +235,7 @@ form button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url("/img/svg/check-mark.svg");
+  background-image: url("../img/svg/check-mark.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 7px;

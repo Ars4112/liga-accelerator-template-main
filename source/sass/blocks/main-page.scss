@@ -2,25 +2,24 @@
   width: 100%;
   min-height: 880px;
   background-color: #1f5a72;
-  background-image: linear-gradient(180deg, #19202470, #19202400),
-    url("../img/main-page.jpg");
+  background: linear-gradient(#04182780), url("../img/main-page.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding-top: 305px;
 
   @media (min-resolution: 1dppx) {
-    background-image: linear-gradient(180deg, #19202470, #19202400),
+    background-image:linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
       url("../img/main-page.webp");
   }
 
   @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(180deg, #19202470, #19202400),
+    background-image:linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
       url("../img/main-page@2x.jpg");
   }
 
   @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(180deg, #19202470, #19202400),
+    background-image:linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
       url("../img/main-page@2x.webp");
   }
 
@@ -44,6 +43,7 @@
 
 .main-page__title {
   @include fonts(80px, 94px);
+  font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #f2f5f7;

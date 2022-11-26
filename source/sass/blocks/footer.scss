@@ -21,6 +21,7 @@
   @media (max-width: 1320px) {
     grid-template-columns: 1fr 2fr;
     justify-content: space-between;
+    left: 0;
   }
 
   @media (max-width: $vp-1024) {
@@ -232,14 +233,14 @@
 }
 
 .footer__nav-element--opened {
-  background: url("/img/svg/footer-opened.svg");
+  background: url("../img/svg/footer-opened.svg");
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-position: center;
 }
 
 .footer__nav-element--closed {
-  background: url("/img/svg/footer-closed.svg");
+  background: url("../img/svg/footer-closed.svg");
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-position: center;

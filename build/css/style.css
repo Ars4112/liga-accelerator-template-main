@@ -395,7 +395,7 @@ template {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "PT_Mono";
+  font-family: "PT-Mono";
   font-display: swap;
   src: url("../fonts/PT-Mono.woff2") format "woff2", url("../fonts/PT-Mono.woff") format "woff";
 }
@@ -544,7 +544,7 @@ button,
 }
 
 body {
-  font-family: "PT_Mono", "Arial", sans-serif;
+  font-family: "PT-Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1054,14 +1054,14 @@ body {
 }
 
 .footer__nav-element--opened {
-  background: url("/img/svg/footer-opened.svg");
+  background: url("../img/svg/footer-opened.svg");
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-position: center;
 }
 
 .footer__nav-element--closed {
-  background: url("/img/svg/footer-closed.svg");
+  background: url("../img/svg/footer-closed.svg");
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-position: center;
@@ -1071,9 +1071,9 @@ body {
   width: 100%;
   min-height: 880px;
   background-color: #1f5a72;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 32, 36, 0.4392156863)), to(rgba(25, 32, 36, 0))), url("../img/main-page.jpg");
-  background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.4392156863), rgba(25, 32, 36, 0)), url("../img/main-page.jpg");
-  background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.4392156863), rgba(25, 32, 36, 0)), url("../img/main-page.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5019607843))), url("../img/main-page.jpg");
+  background: -o-linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("../img/main-page.jpg");
+  background: linear-gradient(rgba(4, 24, 39, 0.5019607843)), url("../img/main-page.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1091,6 +1091,7 @@ body {
   font-weight: 400;
   font-size: 80px;
   line-height: 94px;
+  font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #f2f5f7;
@@ -1604,7 +1605,7 @@ form button:active {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  background-image: url("/img/svg/check-mark.svg");
+  background-image: url("../img/svg/check-mark.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 7px;
@@ -1749,6 +1750,7 @@ form button:active {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    left: 0;
   }
 
   .footer__logo-wrapper {
@@ -1781,12 +1783,6 @@ form button:active {
   .header__item--grid {
     -ms-grid-columns: (auto)[2];
     grid-template-columns: repeat(2, auto);
-  }
-}
-
-@media (max-width: 1230px) {
-  .form__image {
-    display: none;
   }
 }
 
@@ -2455,9 +2451,9 @@ form button:active {
 
 @media (-webkit-min-device-pixel-ratio: 1), (-o-min-device-pixel-ratio: 1/1), (min-resolution: 1dppx) {
   .main-page {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 32, 36, 0.4392156863)), to(rgba(25, 32, 36, 0))), url("../img/main-page.webp");
-    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.4392156863), rgba(25, 32, 36, 0)), url("../img/main-page.webp");
-    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.4392156863), rgba(25, 32, 36, 0)), url("../img/main-page.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/main-page.webp");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/main-page.webp");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/main-page.webp");
   }
 
   .services__item--production {
@@ -2481,15 +2477,15 @@ form button:active {
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .main-page {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 32, 36, 0.4392156863)), to(rgba(25, 32, 36, 0))), url("../img/main-page@2x.jpg");
-    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.4392156863), rgba(25, 32, 36, 0)), url("../img/main-page@2x.jpg");
-    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.4392156863), rgba(25, 32, 36, 0)), url("../img/main-page@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/main-page@2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/main-page@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/main-page@2x.jpg");
   }
 
   .main-page {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 32, 36, 0.4392156863)), to(rgba(25, 32, 36, 0))), url("../img/main-page@2x.webp");
-    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.4392156863), rgba(25, 32, 36, 0)), url("../img/main-page@2x.webp");
-    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.4392156863), rgba(25, 32, 36, 0)), url("../img/main-page@2x.webp");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/main-page@2x.webp");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/main-page@2x.webp");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/main-page@2x.webp");
   }
 
   .services__item--production {
