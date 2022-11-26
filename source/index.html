@@ -27,25 +27,23 @@
     <header class="header">
       <ul class="header__list">
         <li class="header__item">
-          <a class="header__logo" href="index.html">
-            <picture>
-              <source
-                media="(min-width: 768px)"
-                srcset="img/svg/logo-desktop.svg"
-                width="215"
-                height="55"
-              />
-              <img
-                src="img/svg/logo-mobile.svg"
-                alt="Логотип Смарт Девайс"
-                width="35"
-                height="35"
-              />
-            </picture>
-          </a>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="img/svg/logo-desktop.svg"
+              width="215"
+              height="55"
+            />
+            <img
+              src="img/svg/logo-mobile.svg"
+              alt="Логотип Смарт Девайс"
+              width="35"
+              height="35"
+            />
+          </picture>
         </li>
         <li class="header__item header__item--grid">
-          <a class="header__link" href="#">
+          <a class="header__link" href="mailto:info@sd.ru">
             <span class="visually-hidden">адрес электронной почты</span>
             <svg
               class="header__link-icon"
@@ -58,7 +56,7 @@
             </svg>
             <span class="header__link-text">info@sd.ru</span>
           </a>
-          <a class="header__link" href="#">
+          <a class="header__link" href="tel:+7 (495) 000 52 52">
             <span class="visually-hidden">номер телефона</span>
             <svg
               class="header__link-icon"
@@ -258,75 +256,81 @@
       </section>
       <section class="form" id="form">
         <h2 class="visually-hidden">обратная связь</h2>
-        <img
-          class="form__image"
-          src="img/svg/paper_airplane.svg"
-          alt="Бумажный самолетик"
-          width="510"
-          height="285"
-        />
-        <div class="form__wrapper">
-          <h3 class="form__title">Остались вопросы? Задайте их нам!</h3>
-          <p class="form__text">Мы проконсультируем Вас бесплатно</p>
-          <form action="https://echo.htmlacademy.ru" method="get">
-            <div class="form__wrapper-inner">
+        <div class="form__inner-wrapper">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/svg/paper_airplane.svg"
+            />
+            <img
+              class="form__image"
+              src="img/svg/paper_airplane.svg"
+              alt="Бумажный самолетик"
+              width="510"
+              height="285"
+            />
+          </picture>
+          <div class="form__wrapper">
+            <h3 class="form__title">Остались вопросы? Задайте их нам!</h3>
+            <p class="form__text">Мы проконсультируем Вас бесплатно</p>
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <div class="form__wrapper-inner">
+                <label>
+                  <span class="visually-hidden">имя</span>
+                  <input name="name" type="text" placeholder="Имя" required />
+                </label>
+                <label>
+                  <span class="visually-hidden">номер телефона</span>
+                  <input
+                    name="tel"
+                    type="tel"
+                    placeholder="Телефон"
+                    minlength="11"
+                    required
+                  />
+                  <span class="form__message form__message-hidden"
+                    >Не корректный номер</span
+                  >
+                </label>
+              </div>
               <label>
-                <span class="visually-hidden">имя</span>
-                <input name="name" type="text" placeholder="Имя" required />
+                <span class="visually-hidden">ваш вопрос</span>
+                <textarea name="question" placeholder="Ваш вопрос"></textarea>
               </label>
-              <label>
-                <span class="visually-hidden">номер телефона</span>
-                <span class="form__message form__message-hidden"
-                  >Не корректный номер</span
-                >
-                <input
-                  name="tel"
-                  type="text"
-                  placeholder="Телефон"
-                  minlength="11"
-                  required
-                />
-              </label>
-            </div>
-            <label>
-              <span class="visually-hidden">ваш вопрос</span>
-              <textarea name="question" placeholder="Ваш вопрос"></textarea>
-            </label>
-            <div class="form__wrapper-button">
-              <button type="submit">Задать вопрос</button>
-              <label>
-                <span class="visually-hidden"
-                  >согласие на обработку персональных данных</span
-                >
-                <input
-                  class="visually-hidden"
-                  type="checkbox"
-                  name="agreement"
-                  checked
-                  required
-                />
-                <span class="form__control-mark"></span>
-                <span class="form__checkbox-text"
-                  >Я&nbsp;согласен на&nbsp;обработку персональных данных</span
-                >
-              </label>
-            </div>
-          </form>
+              <div class="form__wrapper-button">
+                <button type="submit">Задать вопрос</button>
+                <label>
+                  <span class="visually-hidden"
+                    >согласие на обработку персональных данных</span
+                  >
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="agreement"
+                    checked
+                    required
+                  />
+                  <span class="form__control-mark"></span>
+                  <span class="form__checkbox-text"
+                    >Я&nbsp;согласен на&nbsp;обработку персональных данных</span
+                  >
+                </label>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__logo-wrapper">
-          <a href="#">
-            <img
-              class="footer__logo"
-              src="img/svg/logo-desktop.svg"
-              alt="Логотип Смарт Девайс"
-              width="215"
-              height="55"
-            />
-          </a>
+          <img
+            class="footer__logo"
+            src="img/svg/logo-desktop.svg"
+            alt="Логотип Смарт Девайс"
+            width="215"
+            height="55"
+          />
           <ul class="footer__sosial-list">
             <li class="footer__sosial-item">
               <a class="footer__sosial-link" href="#">

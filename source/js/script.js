@@ -4,17 +4,19 @@ const footerNavElement = document.querySelectorAll('.footer__nav-element');
 let viewport = document.documentElement.clientWidth;
 
 if (viewport <= 767) {
-  footerNavElement.forEach((element)=> {
+  footerNavElement.forEach((element) => {
     element.classList.toggle('footer__nav-element--opened');
   });
-  footerListNav.forEach((userItem)=> {
+  footerListNav.forEach((userItem) => {
     userItem.classList.toggle('footer__nav-list--hidden');
   });
   footerNavTitle.forEach(function (titleElement) {
     const current =
       titleElement.parentElement.querySelectorAll('.footer__nav-list')[0];
 
-    const currentElement = titleElement.parentElement.querySelectorAll('.footer__nav-element')[0];
+    const currentElement = titleElement.parentElement.querySelectorAll(
+        '.footer__nav-element'
+    )[0];
 
     titleElement.addEventListener('click', function () {
       current.classList.toggle('footer__nav-list--hidden');
@@ -23,7 +25,6 @@ if (viewport <= 767) {
 
       if (!isClosed) {
         currentElement.classList.add('footer__nav-element--closed');
-
       } else {
         currentElement.classList.remove('footer__nav-element--closed');
       }
@@ -35,7 +36,9 @@ if (viewport <= 767) {
       footerListNav.forEach((listElement) => {
         if (listElement !== current) {
           listElement.classList.add('footer__nav-list--hidden');
-          listElement.parentElement.querySelectorAll('.footer__nav-element')[0].classList.remove('footer__nav-element--closed');
+          listElement.parentElement
+              .querySelectorAll('.footer__nav-element')[0]
+              .classList.remove('footer__nav-element--closed');
         }
       });
     });
@@ -92,8 +95,6 @@ const addScroll = () => {
 
     mainPageButton.addEventListener('click', isScroll);
   }
-
-
 };
 
 const addMask = () => {
@@ -109,7 +110,6 @@ const addMask = () => {
       let val = e.target.value.replace(/\D/g, '');
       if (clearVal !== 'false' && e.type === 'blur') {
         if (val.length < matrix.match(/([\_\d])/g).length) {
-          // e.target.value = '';
           return;
         }
       }
@@ -118,11 +118,11 @@ const addMask = () => {
       }
       e.target.value = matrix.replace(/./g, function (a) {
         if (/[_\d]/.test(a) && i < val.length) {
-          return (val.charAt(i++));
+          return val.charAt(i++);
         } else if (i >= val.length) {
-          return ('');
+          return '';
         } else {
-          return (a);
+          return a;
         }
       });
     };
@@ -135,13 +135,28 @@ const addMask = () => {
   });
 };
 
-document.querySelectorAll('.form form').forEach((item)=> {
-  item.addEventListener('submit', (evt)=> {
-    let phoneInput = item.querySelector('input[name="tel"]');
-    if (phoneInput.value.replaceAll(/\D/g, '').length < 11) {
-      evt.preventDefault();
-      phoneInput.parentElement.querySelectorAll('span')[1].classList.remove('form__message-hidden');
+let phoneInput = document.querySelectorAll('input[name="tel"]');
+const form = document.querySelectorAll('.form form');
+let isValidate = false;
+
+phoneInput.forEach((ss) => {
+  ss.addEventListener('blur', () => {
+    if (ss.value.replaceAll(/\D/g, '').length < 11) {
+      ss.nextElementSibling.classList.remove('form__message-hidden');
+      isValidate = false;
+    } else {
+      ss.nextElementSibling.classList.add('form__message-hidden');
+      isValidate = true;
     }
+  });
+});
+
+form.forEach((item) => {
+  item.addEventListener('submit', (evt) => {
+    if (!isValidate) {
+      evt.preventDefault();
+    }
+
   });
 });
 

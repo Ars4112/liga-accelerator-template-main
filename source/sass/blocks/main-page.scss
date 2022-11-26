@@ -2,24 +2,37 @@
   width: 100%;
   min-height: 880px;
   background-color: #1f5a72;
-  background: linear-gradient(#04182780), url("../img/main-page.jpg");
+  background-image: linear-gradient(#04182780), url("../img/main-page.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding-top: 305px;
+  padding-bottom: 20px;
 
   @media (min-resolution: 1dppx) {
-    background-image:linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+    background-image: linear-gradient(
+        180deg,
+        rgba(25, 32, 36, 0.7) 71.72%,
+        rgba(25, 32, 36, 0) 100%
+      ),
       url("../img/main-page.webp");
   }
 
   @media (min-resolution: 2dppx) {
-    background-image:linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+    background-image: linear-gradient(
+        180deg,
+        rgba(25, 32, 36, 0.7) 71.72%,
+        rgba(25, 32, 36, 0) 100%
+      ),
       url("../img/main-page@2x.jpg");
   }
 
   @media (min-resolution: 2dppx) {
-    background-image:linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+    background-image: linear-gradient(
+        180deg,
+        rgba(25, 32, 36, 0.7) 71.72%,
+        rgba(25, 32, 36, 0) 100%
+      ),
       url("../img/main-page@2x.webp");
   }
 
@@ -61,8 +74,6 @@
 .main-page__text {
   font-size: 22px;
   line-height: 34px;
-  letter-spacing: 2px;
-  word-spacing: 2px;
   color: #f2f5f7;
   max-width: 620px;
   margin: 37px 0;
@@ -75,7 +86,7 @@
     font-size: 14px;
     line-height: 22px;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 48px;
   }
 }
 

@@ -15,25 +15,37 @@
   }
 }
 
+.form__inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1220px;
+
+  @media (max-width: 1325px) {
+    width: 100%;
+  }
+}
+
 .form__wrapper {
-  width: 580px;
+  margin-right: 20px;
+
+  @media (max-width: 1230px) {
+    margin-left: 20px;
+    margin-right: 0;
+  }
 
   @media (max-width: $vp-1024) {
     width: 100%;
+    margin-left: 0;
   }
 }
 
 .form__image {
   display: block;
-  margin-right: 104px;
 
-  @media (max-width: 1315px) {
-    margin-right: auto;
+  @media (max-width: $vp-1024) {
+    display: none;
   }
-
-  // @media (max-width: 1230px) {
-  //   display: none;
-  // }
 }
 
 .form__title {
@@ -60,7 +72,6 @@
     margin: 3px 0 35px 0;
     font-size: 14px;
     line-height: 19px;
-    word-spacing: 16px;
   }
 }
 
@@ -206,12 +217,7 @@ form button {
   color: #ffffff;
   font-size: 14px;
   line-height: 16px;
-  word-spacing: 10px;
   opacity: 0.8;
-
-  @media (max-width: $vp-768) {
-    font-size: 16px;
-  }
 }
 
 .form__control-mark {
