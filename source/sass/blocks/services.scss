@@ -137,6 +137,9 @@
 }
 
 .services__item {
+  position: relative;
+  background: linear-gradient(#04182780);
+
   &:active {
     opacity: 0.8;
   }
@@ -190,17 +193,17 @@
 
     @media (min-resolution: 1dppx) {
       background-image: linear-gradient(#04182780),
-        url("../img/service-mobile-1.webp");
+        url("../img/services-mobile-1.webp");
     }
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(#04182780),
-        url("../img/service-mobile-1@2x.jpg");
+        url("../img/services-mobile-1@2x.jpg");
     }
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(#04182780),
-        url("../img/service-mobile-1@2x.webp");
+        url("../img/services-mobile-1@2x.webp");
     }
   }
 }
@@ -253,17 +256,17 @@
 
     @media (min-resolution: 1dppx) {
       background-image: linear-gradient(#04182780),
-        url("../img/service-mobile-2.webp");
+        url("../img/services-mobile-2.webp");
     }
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(#04182780),
-        url("../img/service-mobile-2@2x.jpg");
+        url("../img/services-mobile-2@2x.jpg");
     }
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(#04182780),
-        url("../img/service-mobile-2@2x.webp");
+        url("../img/services-mobile-2@2x.webp");
     }
   }
 }
@@ -316,17 +319,17 @@
 
     @media (min-resolution: 1dppx) {
       background-image: linear-gradient(#04182780),
-        url("../img/service-mobile-3.webp");
+        url("../img/services-mobile-3.webp");
     }
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(#04182780),
-        url("../img/service-mobile-3@2x.jpg");
+        url("../img/services-mobile-3@2x.jpg");
     }
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(#04182780),
-        url("../img/service-mobile-3@2x.webp");
+        url("../img/services-mobile-3@2x.webp");
     }
   }
 }

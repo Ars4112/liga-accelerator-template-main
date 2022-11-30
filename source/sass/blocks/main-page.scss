@@ -2,7 +2,8 @@
   width: 100%;
   min-height: 880px;
   background-color: #1f5a72;
-  background-image: linear-gradient(#04182780), url("../img/main-page.jpg");
+  background-image: linear-gradient(#04182780),
+    url("../img/main-page-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -15,7 +16,7 @@
         rgba(25, 32, 36, 0.7) 71.72%,
         rgba(25, 32, 36, 0) 100%
       ),
-      url("../img/main-page.webp");
+      url("../img/main-page-desktop.webp");
   }
 
   @media (min-resolution: 2dppx) {
@@ -24,7 +25,7 @@
         rgba(25, 32, 36, 0.7) 71.72%,
         rgba(25, 32, 36, 0) 100%
       ),
-      url("../img/main-page@2x.jpg");
+      url("../img/main-page-desktop@2x.jpg");
   }
 
   @media (min-resolution: 2dppx) {
@@ -33,19 +34,77 @@
         rgba(25, 32, 36, 0.7) 71.72%,
         rgba(25, 32, 36, 0) 100%
       ),
-      url("../img/main-page@2x.webp");
+      url("../img/main-page-desktop@2x.webp");
   }
 
   @media (max-width: $vp-1024) {
+    background-image: linear-gradient(#04182780),
+      url("../img/main-page-tablet.jpg");
     min-height: 555px;
     margin-top: -15px;
     padding: 94px 50px 0;
+
+    @media (min-resolution: 1dppx) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(25, 32, 36, 0.7) 71.72%,
+          rgba(25, 32, 36, 0) 100%
+        ),
+        url("../img/main-page-tablet.webp");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(25, 32, 36, 0.7) 71.72%,
+          rgba(25, 32, 36, 0) 100%
+        ),
+        url("../img/main-page-tablet@2x.jpg");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(25, 32, 36, 0.7) 71.72%,
+          rgba(25, 32, 36, 0) 100%
+        ),
+        url("../img/main-page-tablet@2x.webp");
+    }
   }
 
   @media (max-width: $vp-768) {
+    background-image: linear-gradient(#04182780),
+      url("../img/main-page-mobile.jpg");
     min-height: 494px;
     padding: 0 25px;
     padding-top: 86px;
+
+    @media (min-resolution: 1dppx) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(25, 32, 36, 0.7) 71.72%,
+          rgba(25, 32, 36, 0) 100%
+        ),
+        url("../img/main-page-mobile.webp");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(25, 32, 36, 0.7) 71.72%,
+          rgba(25, 32, 36, 0) 100%
+        ),
+        url("../img/main-page-mobile@2x.jpg");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(25, 32, 36, 0.7) 71.72%,
+          rgba(25, 32, 36, 0) 100%
+        ),
+        url("../img/main-page-mobile@2x.webp");
+    }
   }
 }
 

@@ -140,15 +140,26 @@ const form = document.querySelectorAll('.form form');
 let isValidate = false;
 
 phoneInput.forEach((ss) => {
-  ss.addEventListener('blur', () => {
-    if (ss.value.replaceAll(/\D/g, '').length < 11) {
-      ss.nextElementSibling.classList.remove('form__message-hidden');
-      isValidate = false;
-    } else {
-      ss.nextElementSibling.classList.add('form__message-hidden');
-      isValidate = true;
-    }
+  ['input', 'blur'].forEach((aa)=> {
+    ss.addEventListener(aa, () => {
+      if (ss.value.replaceAll(/\D/g, '').length < 11) {
+        ss.nextElementSibling.classList.remove('form__message-hidden');
+        isValidate = false;
+      } else {
+        ss.nextElementSibling.classList.add('form__message-hidden');
+        isValidate = true;
+      }
+    });
   });
+  // ss.addEventListener('input', () => {
+  //   if (ss.value.replaceAll(/\D/g, '').length < 11) {
+  //     ss.nextElementSibling.classList.remove('form__message-hidden');
+  //     isValidate = false;
+  //   } else {
+  //     ss.nextElementSibling.classList.add('form__message-hidden');
+  //     isValidate = true;
+  //   }
+  // });
 });
 
 form.forEach((item) => {
